@@ -32,7 +32,6 @@ Usage:
       <ul>
     {% endif %}
 
-
     <div class="card">
      <div class="card-image waves-effect waves-block waves-light">   
         <img class="activator" src="{{ post.cover_image }}"></img>
@@ -48,7 +47,11 @@ Usage:
        <p><a href="{{ BASE_PATH }}{{ post.url }}">Read More...</a></p> 
      </div>
      <div class="card-action">
-        <a href="{{ BASE_PATH }}{{ post.url }}">Read More...</a>
+        <a href="{{ BASE_PATH }}{{ post.url }}">Read More...</a>        
+        <a class="right" href="mailto:?subject={{ post.title | cgi_escape }}&body={{ site.production_url | cgi_escape }}"><img src="{{ ASSET_PATH }}/images/email.png"></img></a>
+        <a class="right" href="https://facebook.com/sharer/sharer.php?u={{ site.production_url | cgi_escape }}{{ post.url | cgi_escape }}&t={{ post.title | cgi_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/facebook.png"></img></a>                
+        <a class="right" href="https://linkedin.com/shareArticle?mini=true&url={{ site.production_url | cgi_escape }}{{ post.url | cgi_escape }}&title={{ post.title | cgi_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/linkedin.png"></img></a>
+        <a class="right" href="https://twitter.com/intent/tweet?source={{ site.production_url | cgi_escape }}{{ post.url | cgi_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/twitter.png"></img></a>
      </div> 
    </div>    
 
