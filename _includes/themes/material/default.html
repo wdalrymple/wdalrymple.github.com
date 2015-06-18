@@ -84,21 +84,19 @@
         <div class="footer green">
           <div class="row">
             <div class="col l6 s12">
-              <h5 class="white-text">Contact</h5>
-              <ul>
-                <li>github here</li>
-                <li>twitte here</li>
-                <li>linked-in here</li>
-                <li>etc</li>
-              </ul>
+              <p>             
+              <div>
+                <a href="http://github.com/{{ site.author.github }}"><img src="{{ ASSET_PATH }}/images/github-box.png"></img></a>
+                <a href="http://twitter.com/{{ site.author.twitter }}"><img src="{{ ASSET_PATH }}/images/twitter-box.png"></img></a>
+                <a href="{{ site.author.linkedin }}"><img src="{{ ASSET_PATH }}/images/linkedin-box.png"></img></a>                
+              </div>
             </div>
           </div>
         </div>
         <div class="footer-copyright green darken-1 white-text">
           <div class="container">
             &copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-            with help from <a class="grey-text text-lighten-2" href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-            and <a class="grey-text text-lighten-2" href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+            with help from <a class="grey-text text-lighten-2" href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>, <a class="grey-text text-lighten-2" href="http://getbootstrap.com" target="_blank">Bootstrap</a> and <a class="grey-text text-lighten-2" href="http://materializecss.com" target="_blank">MaterializeCSS</a>
           </container>
         </div>
       </div>

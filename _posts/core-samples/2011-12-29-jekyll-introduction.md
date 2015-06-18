@@ -3,6 +3,7 @@ layout: post
 category : lessons
 tagline: "Supporting tagline"
 tags : [intro, beginner, jekyll, tutorial]
+cover_image: /assets/themes/material/images/jekyll.png
 ---
 {% include JB/setup %}
 
@@ -248,7 +249,8 @@ Render the content variable wherever you want your main content to be injected i
 ### Sub-Templates
 
 Sub-templates are exactly templates with the only difference being they
-define another "root" layout/template within their YAML Front Matter.
+define
+ another "root" layout/template within their YAML Front Matter.
 This essentially means a template will render inside of another template.
 
 ### Includes
