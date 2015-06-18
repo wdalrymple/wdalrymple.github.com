@@ -12,16 +12,16 @@
     </div>
 
   {% unless page.categories == empty %}
-    <div class="row">
-      <i class="small mdi-action-label-outline"></i>
+    <div class="row valign-wrapper">
+      <i class="small mdi-action-label-outline"></i>&nbsp;
       {% assign categories_list = page.categories %}
       {% include JB/categories_list %}
     </div>
   {% endunless %}
   <p/>
   {% unless page.tags == empty %}
-    <div class="row">
-      <i class="small mdi-action-label"></i>
+    <div class="row valign-wrapper">
+      <i class="small mdi-action-label"></i>&nbsp;
       {% assign tags_list = page.tags %}
       {% include JB/tags_list %}
     </div>

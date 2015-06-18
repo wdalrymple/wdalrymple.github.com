@@ -24,13 +24,13 @@ Usage:
     {% for category in categories_list %}
     	<a class="btn waves-effect waves-light small green darken-1" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
     		{{ category | join: "/" }} <span class="badge">{{ site.categories[category].size }}</span>
-    	</a>
+    	</a>&nbsp;
     {% endfor %}
   {% else %}
     {% for category in categories_list %}
     	<a class="btn waves-effect waves-light small green darken-1" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
     		{{ category[0] | join: "/" }} <span class="badge">{{ category[1].size }}</span>
-    	</a>
+    	</a>&nbsp;
     {% endfor %}
   {% endif %}
 {% endif %}

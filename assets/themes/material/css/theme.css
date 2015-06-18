@@ -21,3 +21,7 @@ pre {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.tag-button {
+  padding-right: 10px;
+}
