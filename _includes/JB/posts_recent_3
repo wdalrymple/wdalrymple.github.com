@@ -17,7 +17,7 @@ Usage:
 
 -->{% endcomment %}
 {% for post in posts_recent_3  %}      
-  {% if forloop.index0 < 4 %}    
+  {% if forloop.index0 < 3 %}    
     <div class="card col l12 m12 s12">
      <div class="card-image waves-effect waves-block waves-light">   
         <img class="activator" src="{{ post.cover_image }}"></img>
