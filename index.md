@@ -1,7 +1,9 @@
 ---
-layout: page
+layout: index
 title: Hello World!
 tagline: Supporting tagline
+theme :
+  name : material
 ---
 {% include JB/setup %}
 

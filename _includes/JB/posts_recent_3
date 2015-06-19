@@ -1,0 +1,46 @@
+{% comment %}<!--
+Collate_posts helper. Collated posts by year and month.
+Usage:
+  1) assign the 'posts_collate' variable to a valid array of posts.
+  2) include JB/posts_collate
+  example:
+    {% assign posts_recent_3 = site.posts %}
+    {% include JB/posts_recent_3 %}
+
+  Ordering:
+    Posts are displayed in reverse chronological order.
+    For normal chronological order:
+      1) Change the for loop to this:
+        => 'for post in site.posts reversed'
+      2) Next make sure to change 'post.previous.date' to:
+        => 'post.next.date'
+
+-->{% endcomment %}
+{% for post in posts_recent_3  %}      
+  {% if forloop.index0 < 4 %}    
+    <div class="card col l12 m12 s12">
+     <div class="card-image waves-effect waves-block waves-light">   
+        <img class="activator" src="{{ post.cover_image }}"></img>
+     </div>
+     <div class="card-content">     
+       <span class="card-title activator grey-text text-darken-4">{{ post.title }}<i class="mdi-navigation-more-vert right"></i></span>
+       <p class="grey-text text-lighten-1">{{ post.date | date: "%B %e, %Y" }}</p>               
+     </div>
+     <div class="card-reveal">
+       <span class="card-title activator grey-text text-darken-4">{{ post.title }}<i class="mdi-navigation-close right"></i></span>
+       <p class="grey-text text-lighten-1">{{ post.date | date: "%B %e, %Y" }}</p>
+       <p class="flow-text">{{ post.content | truncate: 400, '...'}}</p>
+       <p><a href="{{ BASE_PATH }}{{ post.url }}">Read More...</a></p> 
+     </div>
+     <div class="card-action">
+        <a href="{{ BASE_PATH }}{{ post.url }}">Read More...</a>                 
+        <a class="right" href="https://facebook.com/sharer/sharer.php?u={{ site.production_url | cgi_escape }}{{ post.url | cgi_escape }}&t={{ post.title | cgi_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/facebook.png"></img></a>                
+        <a class="right" href="https://linkedin.com/shareArticle?mini=true&url={{ site.production_url | cgi_escape }}{{ post.url | cgi_escape }}&title={{ post.title | cgi_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/linkedin.png"></img></a>
+        <a class="right" href="https://twitter.com/intent/tweet?source={{ site.production_url | cgi_escape }}{{ post.url | cgi_escape }}" target="_blank"><img src="{{ ASSET_PATH }}/images/twitter.png"></img></a>
+     </div> 
+   </div>    
+  {% else %}     
+  {% endif %}
+{% endfor %}
+
+{% assign posts_recent_3 = nil %}
