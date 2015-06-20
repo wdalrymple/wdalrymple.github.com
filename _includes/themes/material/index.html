@@ -9,11 +9,14 @@
 </div>
 
 <h2>Recent Updates</h2>
-<div class="row">
-  {% assign posts_recent_3 = site.posts %}
-  {% include JB/posts_recent_3 %}
+<div class="row">  
+  {% assign posts_recent = site.posts %}  
+  {% assign number_of_recent_posts = site.Material.index.number_of_recent_posts : 3 %}
+  {% include JB/posts_recent %}
 </div>
 
 <div class="row">
-    <a class="btn waves-effect waves-light green darken-1" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a>
+  <div class="center">
+    <a class="btn waves-effect waves-light green darken-1" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Load More</a>
+   </div>
 </div>

@@ -28,6 +28,18 @@ author :
 #
 production_url : http://wdalyrmple.github.io
 
+# All material theme specific configurations are namespaced into this hash
+#
+Material :
+
+  # Settings for the index page in the material theme
+  # 
+  # index :
+  #   number_of_recent_posts : <number of recents posts to display on the index page>
+  #
+  index :
+    number_of_recent_posts : 3
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :

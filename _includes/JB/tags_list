@@ -22,11 +22,11 @@ Usage:
 {% else %}
   {% if tags_list.first[0] == null %}
     {% for tag in tags_list %}            
-    	<a class="btn waves-effect waves-light green darken-1" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}&nbsp;&nbsp;&nbsp;&nbsp;{{ site.tags[tag].size }}</a>&nbsp;      
+    	<a class="btn waves-effect waves-light green darken-1" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref"><i class="small mdi-action-label left"></i>{{ tag }}&nbsp;&nbsp;&nbsp;&nbsp;{{ site.tags[tag].size }}</a>&nbsp;      
     {% endfor %}
   {% else %}
     {% for tag in tags_list %}      
-    	<a class="btn waves-effect waves-light green darken-1" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ site.tags[tag].size }}</a>&nbsp;
+    	<a class="btn waves-effect waves-light green darken-1" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref"><i class="small mdi-action-label left"></i>{{ tag[0] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ site.tags[tag].size }}</a>&nbsp;
     {% endfor %}
   {% endif %}
 {% endif %}

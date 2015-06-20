@@ -1,11 +1,12 @@
 {% comment %}<!--
 Collate_posts helper. Collated posts by year and month.
 Usage:
-  1) assign the 'posts_collate' variable to a valid array of posts.
-  2) include JB/posts_collate
+  1) assign the 'posts_recent' variable to a valid array of posts.
+  2) include JB/posts_recent
   example:
-    {% assign posts_recent_3 = site.posts %}
-    {% include JB/posts_recent_3 %}
+    {% assign posts_recent = site.posts %}
+    {% assign number_of_recent_posts = site.Material.index.number_of_recent_posts %}
+    {% include JB/posts_recent %}
 
   Ordering:
     Posts are displayed in reverse chronological order.
@@ -16,8 +17,8 @@ Usage:
         => 'post.next.date'
 
 -->{% endcomment %}
-{% for post in posts_recent_3  %}      
-  {% if forloop.index0 < 3 %}    
+{% for post in posts_recent  %}      
+  {% if forloop.index0 < number_of_recent_posts %}    
     <div class="card col l12 m12 s12">
      <div class="card-image waves-effect waves-block waves-light">   
         <img class="activator" src="{{ post.cover_image }}"></img>
@@ -43,4 +44,4 @@ Usage:
   {% endif %}
 {% endfor %}
 
-{% assign posts_recent_3 = nil %}
+{% assign posts_recent = nil %}
