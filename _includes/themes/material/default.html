@@ -38,14 +38,14 @@
   </head>
 
   <body>
-    <main>
+    <main id="#top-ref">
       <nav class="green" role="navigation">
           <div class="nav-wrapper container">
             <a id="logo-container" href="/#" class="brand-logo">{{ site.title }}</a>
             <ul class="right hide-on-med-and-down">
-              {% assign pages_list = site.pages %}
+              {% assign menu_list = site.pages %}
               {% assign group = 'navigation' %}
-              {% include JB/pages_list %}
+              {% include JB/menu_list %}
               <li>
               <form>
                 <div class="right hide-on-med-and-down input-field">
@@ -57,9 +57,9 @@
             </li>
             </ul>
             <ul id="nav-mobile" class="side-nav green lighten-2">
-              {% assign pages_list = site.pages %}
+              {% assign menu_list = site.pages %}  	  
               {% assign group = 'navigation' %}
-              {% include JB/pages_list %}
+              {% include JB/menu_list %}
               <li>
                 <form>
                   <div class="input-field">
@@ -84,10 +84,10 @@
         <i class="large mdi-navigation-menu"></i>       
       </a>
       <ul>
-        <li><a class="btn-floating green"><i class="large mdi-editor-insert-chart"></i></a></li>
-        <li><a class="btn-floating green"><i class="large mdi-editor-insert-chart"></i></a></li>
-        <li><a class="btn-floating green"><i class="large mdi-editor-insert-chart"></i></a></li>
-        <li><a class="btn-floating green"><i class="large mdi-editor-insert-chart"></i></a></li>
+        <li><a class="btn-floating green" href="/tags.html"><i class="small mdi-action-label"></i></a></li>
+        <li><a class="btn-floating green" href="/categories.html"><i class="small mdi-action-bookmark"></i></a></li>
+        <li><a class="btn-floating green" href="/"><i class="large mdi-action-home"></i></a></li>
+        <li><a class="btn-floating green" href="{{ page.url }}"><i class="large mdi-hardware-keyboard-arrow-up"></i></a></li>        
       </ul>
     </div>
 
