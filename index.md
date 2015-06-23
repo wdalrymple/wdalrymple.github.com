@@ -1,7 +1,7 @@
 ---
 layout: index
 title: Home-Name
-tagline: Supporting-Tagline
+tagline: supporting-tagline
 theme :
   name : material
 ---
