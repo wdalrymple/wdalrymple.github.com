@@ -1,5 +1,5 @@
 {% comment %}<!--
-The pages_list include is a listing helper.
+The menu_list include is a listing helper for navigation, speically apply material design navigation.
 Usage:
   1) assign the 'pages_list' variable to a valid array of pages or posts.
   2) include JB/pages_list
@@ -20,20 +20,16 @@ Usage:
   This helper can be seen in use at: ../_layouts/default.html
 -->{% endcomment %}
 
-{% if site.JB.menu_list.provider == "custom" %}
-  {% include custom/menu_list %}
-{% else %}
-  {% for node in menu_list %}
-    {% if node.title != null %}
-      {% if group == null or group == node.group %}
-      	{% if page.url == node.url %}
-      	<li><a class="collection-item" href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
-      	{% else %}
-      	<li><a class="collection-item" href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
-      	{% endif %}
-      {% endif %}
+{% for node in menu_list %}
+  {% if node.title != null %}
+    {% if group == null or group == node.group %}
+    	{% if page.url == node.url %}
+    	<li><a class="collection-item" href="{{ BASE_PATH }}{{node.url}}" class="active">{{node.title}}</a></li>
+    	{% else %}
+    	<li><a class="collection-item" href="{{ BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+    	{% endif %}
     {% endif %}
-  {% endfor %}
-{% endif %}
+  {% endif %}
+{% endfor %}
 {% assign menu_list = nil %}
 {% assign group = nil %}

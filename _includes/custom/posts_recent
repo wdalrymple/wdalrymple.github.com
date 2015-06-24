@@ -1,5 +1,8 @@
 {% comment %}<!--
-Collate_posts helper. Collated posts by year and month.
+posts_recent helper. Creates a parameter driven length list of material design cards representing posts.
+
+The post template has been extended to include "cover_image" which is used for the card.
+
 Usage:
   1) assign the 'posts_recent' variable to a valid array of posts.
   2) include JB/posts_recent
