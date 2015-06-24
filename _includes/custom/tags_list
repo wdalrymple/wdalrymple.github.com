@@ -1,5 +1,8 @@
 {% comment %}<!--
 The tags_list include is a listing helper for tags.
+
+It has been overridden to use material design buttons.
+
 Usage:
   1) assign the 'tags_list' variable to a valid array of tags.
   2) include JB/tags_list
