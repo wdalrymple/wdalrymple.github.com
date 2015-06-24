@@ -29,11 +29,11 @@
     {% if page.previous %}
       <li class="waves-effect"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="mdi-navigation-chevron-left"></i></a></li>
     {% else %}
-      <li class="disabled left"><a href="#!"><i class="mdi-navigation-chevron-left"></i></a></li>
+      <li class="disabled"><a href="#!"><i class="mdi-navigation-chevron-left"></i></a></li>
     {% endif %}
       <li class="waves-effect"><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}"><i class="mdi-action-list"></i></a></li>
     {% if page.next %}
-      <li class="waves-effect right"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}"></a></li>
+      <li class="waves-effect"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}"><i class="mdi-navigation-chevron-right"></i></a></li>
     {% else %}
       <li class="waves-effect"><a href="#!"><i class="mdi-navigation-chevron-right"></i></a>
     {% endif %}
