@@ -23,14 +23,6 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <!-- Update these with your own images
-      <link rel="shortcut icon" href="images/favicon.ico">
-      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
-    -->
-
     <!-- atom & rss feed -->
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
@@ -46,29 +38,11 @@
               {% assign menu_list = site.pages %}
               {% assign group = 'navigation' %}
               {% include custom/menu_list %}
-              <!--li>
-              <form>
-                <div class="right hide-on-med-and-down input-field">
-                  <input id="search" type="search" required>
-                  <label for="search"><i class="mdi-action-search" placeholder="Search"></i></label>
-                  <i class="mdi-navigation-close"></i>
-                </div>
-              </form>
-            </li-->
             </ul>
             <ul id="nav-mobile" class="side-nav green lighten-2">
               {% assign menu_list = site.pages %}  	  
               {% assign group = 'navigation' %}
               {% include custom/menu_list %}
-              <!--li>
-                <form>
-                  <div class="input-field">
-                    <input id="search" type="search" required>
-                    <label for="search"><i class="mdi-action-search" placeholder="Search"></i></label>
-                    <i class="mdi-navigation-close"></i>
-                  </div>
-                </form>
-              </li-->
             </ul>
             <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
           </div>
