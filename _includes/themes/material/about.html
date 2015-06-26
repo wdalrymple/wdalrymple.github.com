@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+</div>
+
+<div class="row">
+  <div class="collection with-header">
+    <div class="collection-header valign-wrapper"><img class="circle responsive-img" src="{{ site.author.gravatar }}"></img>&nbsp;&nbsp;&nbsp;&nbsp;<h3>{{ site.author.name }}</h3></div>
+    <div class="collection-item activate"><a class="valign-wrapper" href="http://github.com/{{ site.author.github }}"><img src="{{ ASSET_PATH }}/images/github.png"></img>&nbsp;&nbsp;&nbsp;&nbsp;http://github.com/{{ site.author.github }}</a></div>
+    <div class="collection-item activate"><a class="valign-wrapper" href="http://twitter.com/{{ site.author.twitter }}"><img src="{{ ASSET_PATH }}/images/twitter.png"></img>&nbsp;&nbsp;&nbsp;&nbsp;http://twitter/{{ site.author.twitter }}</a></div>
+    <div class="collection-item activate"><a class="valign-wrapper" href="{{ site.author.linkedin }}"><img src="{{ ASSET_PATH }}/images/linkedin.png"></img>&nbsp;&nbsp;&nbsp;&nbsp;{{ site.author.linkedin }}</a></div>  
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    {{ content }}
+  </div>  
+</div>
