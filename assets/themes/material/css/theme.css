@@ -80,3 +80,9 @@ small {
 .post-full .date {
   margin-bottom: 20px;
   font-weight: bold; }
+  
+ .icon-twitter{
+   height: 24;
+   widows: 24;   
+   fill: #ffffff;
+ }
